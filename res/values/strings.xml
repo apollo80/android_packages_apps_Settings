@@ -2149,8 +2149,13 @@
     <!-- Storage setting.  Menu option for USB transfer settings [CHAR LIMIT=30]-->
     <string name="storage_menu_usb">USB computer connection</string>
 
+    <!-- Storage setting.  Menu option for sd-ext partision [CHAR LIMIT=30]-->
+    <string name="storage_menu_sdext">SDExt settings</string>
+
     <!-- Storage setting.  Title for USB transfer settings [CHAR LIMIT=30]-->
     <string name="storage_title_usb">USB computer connection</string>
+    <!-- Storage setting.  Title for SdExt settings [CHAR LIMIT=30]-->
+    <string name="storage_title_sdext">SdExt bind settings</string>
     <!-- Storage setting.  USB connection category [CHAR LIMIT=30]-->
     <string name="usb_connection_category">Connect as</string>
     <!-- Storage setting.  Title for MTP checkbox [CHAR LIMIT=30]-->
@@ -4919,4 +4924,39 @@
 
     <!-- Text to display in regulatory info screen (from device overlay). -->
     <string name="regulatory_info_text"></string>
+
+
+    <!-- SdExt Settings -->
+    <string name="sdext_bind_category">Bind Options</string>
+
+    <!-- Title for bind app setting -->
+    <string name="sdext_bind_app_title">Move apps</string>
+    <!-- Text for bind app setting -->
+    <string name="sdext_bind_app_summary">move /data/app to /sd-ext/app</string>
+
+    <!-- Title for bind app-asec setting -->
+    <string name="sdext_bind_asec_title">Move secure containers</string>
+    <!-- Text for bind app-asec setting -->
+    <string name="sdext_bind_asec_summary">move /data/app-asec to /sd-ext/app-asec</string>
+
+    <!-- Title for bind app-lib setting -->
+    <string name="sdext_bind_lib_title">Move apps libs</string>
+    <!-- Text for bind app-lib setting -->
+    <string name="sdext_bind_lib_summary">move /data/app-lib to /sd-ext/app-lib</string>
+
+    <!-- Title for bind app-private setting -->
+    <string name="sdext_bind_private_title">Move private apps</string>
+    <!-- Text for bind app-private setting -->
+    <string name="sdext_bind_private_summary">move /data/app-private to /sd-ext/app-private</string>
+
+    <!-- Title for bind dalvik-cache setting -->
+    <string name="sdext_bind_dalvik_cache_title">Move dalvik cache</string>
+    <!-- Text for bind davlik-cache setting -->
+    <string name="sdext_bind_dalvik_cache_summary">move /data/dalvik-cache to /sd-ext/dalvik-cache</string>
+
+    <!-- Title for bind data setting -->
+    <string name="sdext_bind_data_title">Move data of apps</string>
+    <!-- Text for bind data setting -->
+    <string name="sdext_bind_data_summary">move /data/data to /sd-ext/data</string>
+
 </resources>

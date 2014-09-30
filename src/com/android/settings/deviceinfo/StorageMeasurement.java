@@ -33,6 +33,7 @@ import android.os.HandlerThread;
 import android.os.IBinder;
 import android.os.Looper;
 import android.os.Message;
+import android.os.SystemProperties;
 import android.os.UserHandle;
 import android.os.UserManager;
 import android.os.storage.StorageVolume;
@@ -377,6 +378,7 @@ public class StorageMeasurement {
         }
 
         private void measureApproximateStorage(IMediaContainerService imcs) {
+            Log.d(TAG, "call measureApproximateStorage");
             final String path = mVolume != null ? mVolume.getPath()
                     : Environment.getDataDirectory().getPath();
             try {
@@ -385,6 +387,21 @@ public class StorageMeasurement {
                 mAvailSize = stats[1];
             } catch (Exception e) {
                 Log.w(TAG, "Problem in container service", e);
+            }
+
+            if ( SystemProperties.get("persist.sdext.mounted", "false").equals("true") )
+            {
+                final String sdextPath = SystemProperties.get("ro.sdext.folder");
+                if (sdextPath != null && !sdextPath.isEmpty() )
+                {
+                    try {
+                        final long[] stats = imcs.getFileSystemStats(sdextPath);
+                        mTotalSize += stats[0];
+                        mAvailSize += stats[1];
+                    } catch (Exception e) {
+                        Log.w(TAG, "Problem in container service", e);
+                    }
+                }
             }
 
             sendInternalApproximateUpdate();

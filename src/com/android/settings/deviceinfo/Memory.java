@@ -34,6 +34,7 @@ import android.os.Environment;
 import android.os.IBinder;
 import android.os.RemoteException;
 import android.os.ServiceManager;
+import android.os.SystemProperties;
 import android.os.UserManager;
 import android.os.storage.IMountService;
 import android.os.storage.StorageEventListener;
@@ -179,6 +180,10 @@ public class Memory extends SettingsPreferenceFragment {
         UserManager um = (UserManager)getActivity().getSystemService(Context.USER_SERVICE);
         boolean usbItemVisible = !um.hasUserRestriction(UserManager.DISALLOW_USB_FILE_TRANSFER);
         usb.setVisible(usbItemVisible);
+
+        final MenuItem sdext = menu.findItem(R.id.storage_sdext);
+        boolean sdextItemVisible = SystemProperties.get("persist.sdext.mounted", "false").equals("true");
+        sdext.setVisible(sdextItemVisible);
     }
 
     @Override
@@ -193,6 +198,18 @@ public class Memory extends SettingsPreferenceFragment {
                             this, 0);
                 } else {
                     startFragment(this, UsbSettings.class.getCanonicalName(), -1, null);
+                }
+                return true;
+
+            case R.id.storage_sdext:
+                if (getActivity() instanceof PreferenceActivity) {
+                    ((PreferenceActivity) getActivity()).startPreferencePanel(
+                            SdExtSettings.class.getCanonicalName(),
+                            null,
+                            R.string.storage_title_sdext, null,
+                            this, 0);
+                } else {
+                    startFragment(this, SdExtSettings.class.getCanonicalName(), -1, null);
                 }
                 return true;
         }
