@@ -23,6 +23,7 @@ import android.preference.PreferenceScreen;
 import com.android.internal.telephony.util.BlacklistUtils;
 import com.android.settings.R;
 import com.android.settings.SettingsPreferenceFragment;
+import com.android.settings.Utils;
 
 /**
  * Privacy settings
@@ -44,13 +45,20 @@ public class PrivacySettings extends SettingsPreferenceFragment {
         if (getActivity().getPackageManager().hasSystemFeature(PackageManager.FEATURE_TELEPHONY)) {
             // WhisperPush
             // Only add if device has telephony support and has WhisperPush installed.
-            if (isPackageInstalled("org.whispersystems.whisperpush")) {
+            if (Utils.isPackageInstalled(getActivity(), "org.whispersystems.whisperpush")) {
                 addPreferencesFromResource(R.xml.security_settings_whisperpush);
             }
         } else {
             // No telephony, remove dependent options
             getPreferenceScreen().removePreference(mBlacklist);
             mBlacklist = null;
+        }
+
+        addPreferencesFromResource(R.xml.security_settings_cyanogenmod);
+        // Logger
+        // Only add if device has Logger installed
+        if (Utils.isPackageInstalled(getActivity(), "com.cyngn.logger")) {
+            addPreferencesFromResource(R.xml.security_settings_logger);
         }
     }
 

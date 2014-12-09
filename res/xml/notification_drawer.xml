@@ -26,6 +26,17 @@
         android:entries="@array/notification_drawer_collapse_on_dismiss_entries"
         android:entryValues="@array/notification_drawer_collapse_on_dismiss_values" />
 
+    <PreferenceScreen
+            settings:includeXmlForSearch="@xml/quick_settings_panel"
+            android:key="quick_settings_panel"
+            android:fragment="com.android.settings.quicksettings.QuickSettings"
+            android:title="@string/quick_settings_panel_title" />
+
+    <Preference
+            android:key="heads_up_enabled"
+            android:fragment="com.android.settings.headsup.HeadsUpSettings"
+            android:title="@string/category_heads_up" />
+
     <PreferenceCategory
         android:title="@string/category_quick_access" >
 
@@ -33,6 +44,16 @@
             android:key="qs_quick_access"
             android:title="@string/title_quick_access"
             android:defaultValue="false" />
+
+        <com.android.settings.cyanogenmod.SystemSettingListPreference
+            android:key="qs_quick_access_size"
+            android:title="@string/title_quick_access_size"
+            android:dialogTitle="@string/title_quick_access_size"
+            android:entries="@array/qs_quick_access_size_entries"
+            android:entryValues="@array/qs_quick_access_size_values"
+            android:summary="%s"
+            android:defaultValue="0"
+            android:dependency="qs_quick_access" />
 
         <com.android.settings.cyanogenmod.SystemSettingCheckBoxPreference
             android:key="qs_quick_access_linked"

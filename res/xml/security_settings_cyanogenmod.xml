@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!--
-     Copyright (C) 2012-2013 The CyanogenMod Project
+<!-- Copyright (C) 2013 The CyanogenMod Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -14,33 +13,18 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
+
 <PreferenceScreen
     xmlns:android="http://schemas.android.com/apk/res/android">
 
-    <PreferenceCategory
-        android:key="additional_options"
-        android:title="@string/additional_options_title">
-
-        <com.android.settings.cyanogenmod.SystemSettingCheckBoxPreference
-            android:key="menu_unlock_screen"
-            android:title="@string/unlock_menu_unlock_title"
-            android:summary="@string/unlock_menu_unlock_summary" />
-
-        <com.android.settings.cyanogenmod.SystemSettingCheckBoxPreference
-            android:key="home_unlock_screen"
-            android:title="@string/unlock_home_unlock_title"
-            android:summary="@string/unlock_home_unlock_summary" />
-
-        <com.android.settings.cyanogenmod.SystemSettingCheckBoxPreference
-            android:key="camera_unlock_screen"
-            android:title="@string/unlock_camera_unlock_title"
-            android:summary="@string/unlock_camera_unlock_summary" />
-
-        <com.android.settings.cyanogenmod.SystemSettingCheckBoxPreference
-            android:key="lockscreen_quick_unlock_control"
-            android:title="@string/unlock_quick_unlock_control_title"
-            android:summary="@string/unlock_quick_unlock_control_summary" />
-
+    <PreferenceCategory android:key="cmprivacy" android:title="@string/privacy_settings_cyanogenmod_category">
+        <!-- Anonymous statistics - (CMStats) -->
+        <PreferenceScreen
+                android:key="cmstats"
+                android:title="@string/anonymous_statistics_title"
+                android:summary="@string/anonymous_statistics_summary"
+                android:fragment="com.android.settings.cmstats.AnonymousStats" >
+        </PreferenceScreen>
     </PreferenceCategory>
 
 </PreferenceScreen>

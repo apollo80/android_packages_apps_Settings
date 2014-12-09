@@ -23,14 +23,14 @@
     <string name="deny" msgid="6947806159746484865">"Απόρριψη"</string>
     <string name="device_info_default" msgid="7847265875578739287">"Άγνωστο"</string>
   <plurals name="show_dev_countdown">
-    <item quantity="one" msgid="5295687242294085452">"Απομένουν <xliff:g id="STEP_COUNT">%1$d</xliff:g> βήματα για να γίνετε προγραμματιστής."</item>
-    <item quantity="other" msgid="6722953419953594148">"Απομένουν <xliff:g id="STEP_COUNT">%1$d</xliff:g> βήματα για να γίνετε προγραμματιστής."</item>
+    <item quantity="one" msgid="5295687242294085452">"Απομένει <xliff:g id="STEP_COUNT">%1$d</xliff:g> βήμα για να ενεργοποιήσετε τις ρυθμίσεις για προγραμματιστές."</item>
+    <item quantity="other" msgid="6722953419953594148">"Απομένουν <xliff:g id="STEP_COUNT">%1$d</xliff:g> βήματα για να ενεργοποιήσετε τις ρυθμίσεις για προγραμματιστές."</item>
   </plurals>
-    <string name="show_dev_on" msgid="1110711554982716293">"Είστε πλέον προγραμματιστής!"</string>
-    <string name="show_dev_already" msgid="2151632240145446227">"Δεν χρειάζεται, είστε ήδη προγραμματιστής."</string>
+    <string name="show_dev_on" msgid="1110711554982716293">"Ενεργοποιήσατε τις ρυθμίσεις για προγραμματιστές!"</string>
+    <string name="show_dev_already" msgid="2151632240145446227">"Δεν χρειάζεται, έχετε ήδη ενεργοποιήσει τις ρυθμίσεις για προγραμματιστές."</string>
     <string name="header_category_wireless_networks" msgid="4944823405420438623">"ΑΣΥΡΜΑΤΟ και ΔΙΚΤΥΑ"</string>
     <string name="header_category_device" msgid="5781174212691167553">"ΣΥΣΚΕΥΗ"</string>
-    <string name="header_category_personal" msgid="6225932173498802187">"ΠΡΟΣΩΠΙΚΟΣ"</string>
+    <string name="header_category_personal" msgid="6225932173498802187">"ΠΡΟΣΩΠΙΚΕΣ"</string>
     <string name="header_category_system" msgid="2073558547468647128">"ΣΥΣΤΗΜΑ"</string>
     <string name="turn_on_radio" msgid="8706561489788373676">"Ενεργοποίηση πομπού"</string>
     <string name="turn_off_radio" msgid="1820294552893884115">"Απενεργοποίηση πομπού"</string>
@@ -473,7 +473,7 @@
     <string name="bluetooth_device_context_connect_advanced" msgid="2643129703569788771">"Επιλογές..."</string>
     <string name="bluetooth_menu_advanced" msgid="8572178316357220524">"Για προχωρημένους"</string>
     <string name="bluetooth_advanced_titlebar" msgid="2142159726881547669">"Προηγμένες ρυθμίσεις Bluetooth"</string>
-    <string name="bluetooth_empty_list_bluetooth_off" msgid="4793562956642282639">"Για να δείτε τις συσκευές, ενεργοποιήστε το Bluetooth."</string>
+    <string name="bluetooth_empty_list_bluetooth_off" msgid="6351930724051893423">"Eνεργοποιήστε το Bluetooth."</string>
     <string name="bluetooth_connect_specific_profiles_title" msgid="6952214406025825164">"Σύνδεση σε..."</string>
     <string name="bluetooth_profile_a2dp" msgid="2031475486179830674">"Ήχος πολυμέσων"</string>
     <string name="bluetooth_profile_headset" msgid="8658779596261212609">"Ήχος τηλεφώνου"</string>
@@ -486,8 +486,8 @@
     <string name="bluetooth_disconnect_headset_profile" msgid="8635908811168780720">"Η συσκευή <xliff:g id="DEVICE_NAME">%1$s</xliff:g> θα αποσυνδεθεί από τον ήχο handsfree."</string>
     <string name="bluetooth_disconnect_hid_profile" msgid="3282295189719352075">"Η συσκευή <xliff:g id="DEVICE_NAME">%1$s</xliff:g> θα αποσυνδεθεί από τη συσκευή εισόδου."</string>
     <string name="bluetooth_disconnect_pan_user_profile" msgid="8037627994382458698">"Θα γίνει αποσύνδεση της πρόσβασης στο Διαδίκτυο μέσω του <xliff:g id="DEVICE_NAME">%1$s</xliff:g>"</string>
-    <string name="bluetooth_disconnect_pan_nap_profile" product="tablet" msgid="5455448395850929200">"Η συσκευή <xliff:g id="DEVICE_NAME">%1$s</xliff:g> θα αποσυνδεθεί από την κοινή χρήση σύνδεσης tablet στο Διαδίκτυο."</string>
-    <string name="bluetooth_disconnect_pan_nap_profile" product="default" msgid="5266851881175033601">"Η συσκευή <xliff:g id="DEVICE_NAME">%1$s</xliff:g> θα αποσυνδεθεί από κοινή χρήση σύνδεσης τηλεφώνου στο Διαδ."</string>
+    <string name="bluetooth_disconnect_pan_nap_profile" product="tablet" msgid="5455448395850929200">"Η συσκευή <xliff:g id="DEVICE_NAME">%1$s</xliff:g> θα αποσυνδεθεί από την κοινόχρηστη σύνδεση στο Διαδίκτυο του tablet."</string>
+    <string name="bluetooth_disconnect_pan_nap_profile" product="default" msgid="5266851881175033601">"Η συσκευή <xliff:g id="DEVICE_NAME">%1$s</xliff:g> θα αποσυνδεθεί από την κοινόχρηστη σύνδεση του τηλεφώνου στο Διαδ."</string>
     <string name="bluetooth_device_advanced_title" msgid="6066342531927499308">"Συσκευή Bluetooth σε ζεύξη"</string>
     <string name="bluetooth_device_advanced_online_mode_title" msgid="3689050071425683114">"Σύνδεση"</string>
     <string name="bluetooth_device_advanced_online_mode_summary" msgid="1204424107263248336">"Σύνδεση σε συσκευή Bluetooth"</string>
@@ -593,7 +593,7 @@
     <string name="wifi_wps_failed_tkip" msgid="4282401586860713349">"Δεν υποστηρίζεται η ρύθμιση ασφάλειας ασύρματου δρομολογητή (TKIP)"</string>
     <string name="wifi_wps_failed_auth" msgid="1174614355181181958">"Αποτυχία ελέγχου ταυτότητας. Προσπαθήστε ξανά."</string>
     <string name="wifi_wps_failed_overlap" msgid="5159533685596844778">"Έχει εντοπιστεί μια άλλη συνεδρία WPS. Προσπαθήστε ξανά σε λίγα λεπτά."</string>
-    <string name="wifi_ssid" msgid="641393708309146745">"Δίκτυο SSID"</string>
+    <string name="wifi_ssid" msgid="641393708309146745">"SSID δικτύου"</string>
     <string name="wifi_ssid_hint" msgid="897593601067321355">"Πληκτρολογήστε το SSID"</string>
     <string name="wifi_security" msgid="6603611185592956936">"Ασφάλεια"</string>
     <string name="wifi_signal" msgid="5514120261628065287">"Ισχύς σήματος"</string>
@@ -678,7 +678,7 @@
     <string name="wifi_tether_enabled_subtext" msgid="8948641212931906143">"Το φορητό σημείο πρόσβασης <xliff:g id="NETWORK_SSID">%1$s</xliff:g> είναι ενεργό"</string>
     <string name="wifi_tether_failed_subtext" msgid="1484941858530919002">"Σφάλμα φορητού σημείου πρόσβασης Wi-Fi"</string>
     <string name="wifi_tether_configure_ap_text" msgid="7974681394041609308">"Ρύθμιση φορητού σημείου πρόσβασης Wi-Fi"</string>
-    <string name="wifi_tether_configure_subtext" msgid="7957547035983257748">"Φορητό σημείο πρόσβασης Wi-Fi <xliff:g id="NETWORK_SSID">%1$s</xliff:g><xliff:g id="NETWORK_SECURITY">%2$s</xliff:g>"</string>
+    <string name="wifi_tether_configure_subtext" msgid="7957547035983257748">"Φορητό σημείο πρόσβασης Wi-Fi <xliff:g id="NETWORK_SSID">%1$s</xliff:g> <xliff:g id="NETWORK_SECURITY">%2$s</xliff:g>"</string>
     <string name="wifi_tether_configure_ssid_default" msgid="8467525402622138547">"AndroidHotspot"</string>
     <string name="home_settings" msgid="212375129455718176">"Αρχική σελίδα"</string>
     <string name="display_settings_title" msgid="1708697328627382561">"Προβολή"</string>
@@ -926,8 +926,8 @@
     <string name="master_clear_title" msgid="5907939616087039756">"Επαναφορά εργοστασιακών δεδομένων"</string>
     <string name="master_clear_summary" product="tablet" msgid="4036344100254678429">"Διαγραφή όλων των δεδομένων στο tablet"</string>
     <string name="master_clear_summary" product="default" msgid="4986154238001088492">"Διαγραφή όλων των δεδομένων στο τηλέφωνο"</string>
-    <string name="master_clear_desc" product="tablet" msgid="8317211882509025841">"Με αυτόν τον τρόπο, θα διαγραφούν όλα τα δεδομένα από τον "<b>"εσωτερικό χώρο αποθήκευσης"</b>" της συσκευής σας tablet, συμπεριλαμβανομένων:\n\nΤων δεδομένων και των ρυθμίσεων συστήματος "<li>"του Λογαριασμού σας Google "</li>\n<li></li>\n<li>"Ληφθείσες εφαρμογές"</li></string>
-    <string name="master_clear_desc" product="default" msgid="9165016501623540228">"Με αυτόν τον τρόπο, θα διαγραφούν όλα τα δεδομένα από τον "<b>"εσωτερικό χώρο αποθήκευσης"</b>" της συσκευής σας tablet, συμπεριλαμβανομένων:\n\nΤων δεδομένων και των ρυθμίσεων συστήματος "<li>"του Λογαριασμού σας Google "</li>\n<li></li>\n<li>"Ληφθείσες εφαρμογές"</li></string>
+    <string name="master_clear_desc" product="tablet" msgid="8317211882509025841">"Με αυτόν τον τρόπο, θα διαγραφούν όλα τα δεδομένα από τον "<b>"εσωτερικό χώρο αποθήκευσης"</b>" του tablet σας, συμπεριλαμβανομένων:\n\nΤων δεδομένων και των ρυθμίσεων συστήματος "<li>"του Λογαριασμού σας Google "</li>\n<li></li>\n<li>"Ληφθείσες εφαρμογές"</li></string>
+    <string name="master_clear_desc" product="default" msgid="9165016501623540228">"Με αυτόν τον τρόπο, θα διαγραφούν όλα τα δεδομένα από τον "<b>"εσωτερικό χώρο αποθήκευσης"</b>" του τηλεφώνου σας, συμπεριλαμβανομένων:\n\nΤων δεδομένων και των ρυθμίσεων συστήματος "<li>"του Λογαριασμού σας Google "</li>\n<li></li>\n<li>"Ληφθείσες εφαρμογές"</li></string>
     <string name="master_clear_accounts" product="default" msgid="6412857499147999073">\n\n"Αυτήν τη στιγμή είστε συνδεδεμένοι στους παρακάτω λογαριασμούς:\n"</string>
     <string name="master_clear_desc_also_erases_external" msgid="1903185203791274237"><li>"Μουσική"</li>\n<li>"Φωτογραφίες"</li>\n<li>"Άλλα δεδομένα χρήστη"</li></string>
     <string name="master_clear_desc_erase_external_storage" product="nosdcard" msgid="7744115866662613411">\n\n"Πρέπει να γίνει διαγραφή του "<b>"χώρου αποθήκευσης USB"</b>" για να γίνει, επίσης, εκκαθάριση της μουσικής, των εικόνων και άλλων δεδομένων."</string>
@@ -973,14 +973,14 @@
     <string name="usb_tethering_unavailable_subtext" msgid="1044622421184007254">"Το USB δεν συνδέθηκε"</string>
     <string name="usb_tethering_errored_subtext" msgid="1377574819427841992">"Σφάλμα πρόσδεσης USB"</string>
     <string name="bluetooth_tether_checkbox_text" msgid="2379175828878753652">"Πρόσδεση Bluetooth"</string>
-    <string name="bluetooth_tethering_available_subtext" product="tablet" msgid="8811610320942954709">"Κοινή χρήση της σύνδεσης του tablet στο Διαδίκτυο"</string>
-    <string name="bluetooth_tethering_available_subtext" product="default" msgid="4229220575771946723">"Κοινή χρήση της σύνδεσης τηλεφώνου στο Διαδίκτυο"</string>
-    <string name="bluetooth_tethering_device_connected_subtext" product="tablet" msgid="2730938191906597896">"Κοινή χρήση σύνδεσης tablet στο Διαδίκτυο με 1 συσκευή"</string>
-    <string name="bluetooth_tethering_device_connected_subtext" product="default" msgid="1666736165420290466">"Κοινή χρήση σύνδεσης τηλεφώνου στο Διαδίκτυο με 1 συσκευή"</string>
-    <string name="bluetooth_tethering_devices_connected_subtext" product="tablet" msgid="1180765608259580143">"Κοινή χρήση σύνδεσης tablet στο Διαδίκτυο με <xliff:g id="CONNECTEDDEVICECOUNT">%1$d</xliff:g> συσκευές"</string>
-    <string name="bluetooth_tethering_devices_connected_subtext" product="default" msgid="8248942539362173005">"Κοινή χρήση σύνδεσης τηλεφώνου στο Διαδίκτυο με <xliff:g id="CONNECTEDDEVICECOUNT">%1$d</xliff:g> συσκευές"</string>
-    <string name="bluetooth_tethering_off_subtext" product="tablet" msgid="2093881379028235555">"Χωρίς κοινή χρήση σύνδεσης tablet στο Διαδ."</string>
-    <string name="bluetooth_tethering_off_subtext" product="default" msgid="706860924389041342">"Χωρίς κοινή χρήση σύνδεσης τηλεφώνου στο Διαδ."</string>
+    <string name="bluetooth_tethering_available_subtext" product="tablet" msgid="8811610320942954709">"Η σύνδεση του tablet στο Διαδίκτυο είναι κοινόχρηστη"</string>
+    <string name="bluetooth_tethering_available_subtext" product="default" msgid="4229220575771946723">"Η σύνδεση του τηλεφώνου στο Διαδίκτυο μοιράζεται"</string>
+    <string name="bluetooth_tethering_device_connected_subtext" product="tablet" msgid="2730938191906597896">"Η σύνδεση στο Διαδίκτυο του tablet μοιράζεται με 1 συσκευή"</string>
+    <string name="bluetooth_tethering_device_connected_subtext" product="default" msgid="1666736165420290466">"Η σύνδεση του τηλεφώνου στο Διαδίκτυο μοιράζεται με 1 συσκευή"</string>
+    <string name="bluetooth_tethering_devices_connected_subtext" product="tablet" msgid="1180765608259580143">"H σύνδεση στο Διαδίκτυο του tablet μοιράζεται με <xliff:g id="CONNECTEDDEVICECOUNT">%1$d</xliff:g> συσκευές"</string>
+    <string name="bluetooth_tethering_devices_connected_subtext" product="default" msgid="8248942539362173005">"Η σύνδεση του τηλεφώνου στο Διαδίκτυο μοιράζεται με <xliff:g id="CONNECTEDDEVICECOUNT">%1$d</xliff:g> συσκευές"</string>
+    <string name="bluetooth_tethering_off_subtext" product="tablet" msgid="2093881379028235555">"Η σύνδεση του tablet στο Διαδ. δεν είναι κοινόχρηστη"</string>
+    <string name="bluetooth_tethering_off_subtext" product="default" msgid="706860924389041342">"Η σύνδεση τηλεφώνου στο Διαδ. δεν μοιράζεται"</string>
     <string name="bluetooth_tethering_errored_subtext" msgid="4926566308991142264">"Δεν έχει συνδεθεί"</string>
     <string name="bluetooth_tethering_overflow_error" msgid="6285122039489881969">"Αδυναμία σύνδεσης σε περισσότερες από <xliff:g id="MAXCONNECTION">%1$d</xliff:g> συσκευές"</string>
     <string name="bluetooth_untether_blank" msgid="2871192409329334813">"<xliff:g id="DEVICE_NAME">%1$s</xliff:g> θα αποσυνδεθεί."</string>
@@ -989,7 +989,7 @@
     <string name="manage_mobile_plan_title" msgid="7630170375010107744">"Πρόγραμμα κινητής τηλεφωνίας"</string>
     <string name="sms_application_title" msgid="6134351177937015839">"Προεπιλεγμένη εφαρμογή SMS"</string>
     <string name="sms_change_default_dialog_title" msgid="1958688831875804286">"Αλλαγή εφαρμογής SMS;"</string>
-    <string name="sms_change_default_dialog_text" msgid="1522783933230274787">"Χρήση του <xliff:g id="NEW_APP">%s</xliff:g> αντί του <xliff:g id="CURRENT_APP">%s</xliff:g> ως εφαρμογή SMS;"</string>
+    <string name="sms_change_default_dialog_text" msgid="1522783933230274787">"Χρήση του <xliff:g id="NEW_APP">%1$s</xliff:g> αντί του <xliff:g id="CURRENT_APP">%2$s</xliff:g> ως εφαρμογή SMS;"</string>
     <string name="sms_change_default_no_previous_dialog_text" msgid="602683880284921998">"Χρήση του <xliff:g id="NEW_APP">%s</xliff:g> ως εφαρμογή SMS;"</string>
     <string name="mobile_unknown_sim_operator" msgid="9101230468757324260">"Άγνωστος τελεστής SIM"</string>
     <string name="mobile_no_provisioning_url" msgid="2399426808423775711">"%1$s δεν διαθέτει γνωστό ιστότοπο παροχής"</string>
@@ -999,7 +999,7 @@
     <string name="location_mode_title" msgid="3982009713118421689">"Λειτουργία"</string>
     <string name="location_mode_high_accuracy_title" msgid="8241802585110932849">"Υψηλή ακρίβεια"</string>
     <string name="location_mode_battery_saving_title" msgid="711273645208158637">"Εξοικονόμησης μπαταρίας"</string>
-    <string name="location_mode_sensors_only_title" msgid="3040366132175435160">"Μόνο στη συσκευή"</string>
+    <string name="location_mode_sensors_only_title" msgid="3040366132175435160">"Μόνο συσκευή"</string>
     <string name="location_mode_location_off_title" msgid="2829713015012529465">"Τοποθεσία απενεργοποιημένη"</string>
     <string name="location_category_recent_location_requests" msgid="1938721350424447421">"Πρόσφατα αιτήματα τοποθεσίας"</string>
     <string name="location_no_recent_apps" msgid="2800907699722178041">"Καμία εφαρμογή δεν ζήτησε πρόσφατα την τοποθεσία σας."</string>
@@ -1146,7 +1146,7 @@
     <string name="disabled" msgid="9206776641295849915">"Απενεργοποιημένο"</string>
     <string name="not_installed" msgid="1475144352069281880">"Δεν έχει εγκατασταθεί"</string>
     <string name="no_applications" msgid="7336588977497084921">"Δεν υπάρχουν εφαρμογές."</string>
-    <string name="internal_storage" msgid="1584700623164275282">"Εσ. αποθ. χώρος"</string>
+    <string name="internal_storage" msgid="1584700623164275282">"Εσωτερικός αποθ. χώρος"</string>
     <string name="sd_card_storage" product="nosdcard" msgid="2673203150465132465">"Αποθ. χώρος USB"</string>
     <string name="sd_card_storage" product="default" msgid="7623513618171928235">"Κάρ. χώρ. απ. SD"</string>
     <string name="recompute_size" msgid="7722567982831691718">"Εκ νέου υπολογισμός μεγέθους..."</string>
@@ -1211,7 +1211,7 @@
     <string name="service_started_by_app" msgid="818675099014723551">"Εκκινήθηκε από εφαρμογή"</string>
     <!-- no translation found for service_client_name (4037193625611815517) -->
     <skip />
-    <string name="service_background_processes" msgid="6844156253576174488">"<xliff:g id="MEMORY">%1$s</xliff:g> δωρ."</string>
+    <string name="service_background_processes" msgid="6844156253576174488">"<xliff:g id="MEMORY">%1$s</xliff:g> ελεύθ."</string>
     <string name="service_foreground_processes" msgid="7583975676795574276">"<xliff:g id="MEMORY">%1$s</xliff:g> μετ."</string>
     <string name="memory" msgid="6609961111091483458">"RAM"</string>
     <!-- no translation found for service_process_name (4098932168654826656) -->
@@ -1402,6 +1402,7 @@
     <string name="captioning_background_color" msgid="9053011212948992570">"Χρώμα φόντου"</string>
     <string name="captioning_background_opacity" msgid="6029993616419971202">"Αδιαφάνεια φόντου"</string>
     <string name="captioning_foreground_color" msgid="85623486537640059">"Χρώμα γραμματοσειράς"</string>
+    <string name="captioning_foreground_opacity" msgid="4370967856995419788">"Αδιαφάνεια κειμένου"</string>
     <string name="captioning_edge_color" msgid="3670094753735263238">"Χρώμα άκρων"</string>
     <string name="captioning_edge_type" msgid="5997247394951682154">"Τύπος άκρων"</string>
     <string name="captioning_typeface" msgid="1826169240566563259">"Οικογένεια γραμματοσειρών"</string>

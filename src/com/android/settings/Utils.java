@@ -26,6 +26,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.content.pm.ApplicationInfo;
+import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
 import android.content.pm.PackageManager.NameNotFoundException;
 import android.content.pm.ResolveInfo;
@@ -535,6 +536,14 @@ public class Utils {
         return new File(filename).exists();
     }
 
+    public static boolean fileIsReadable(String fname) {
+        return new File(fname).canRead();
+    }
+
+    public static boolean fileIsWritable(String fname) {
+        return new File(fname).canWrite();
+    }
+
     public static String fileReadOneLine(String fname) {
         BufferedReader br;
         String line = null;
@@ -685,6 +694,11 @@ public class Utils {
                 .getUsers().size() > 1;
     }
 
+    public static boolean isRestrictedProfile(Context context) {
+        UserManager um = (UserManager) context.getSystemService(Context.USER_SERVICE);
+        return um.getUserInfo(um.getUserHandle()).isRestricted();
+    }
+
     private static int getScreenType(Context context) {
         if (sDeviceType == -1) {
             WindowManager wm = (WindowManager) context.getSystemService(Context.WINDOW_SERVICE);
@@ -755,5 +769,35 @@ public class Utils {
     /* returns whether the device has volume rocker or not. */
     public static boolean hasVolumeRocker(Context context) {
         return context.getResources().getBoolean(R.bool.has_volume_rocker);
+    }
+
+    public static boolean isPackageInstalled(Context context, String pkg) {
+        if (pkg == null) {
+            return false;
+        }
+        try {
+            PackageInfo pi = context.getPackageManager().getPackageInfo(pkg, 0);
+            if (!pi.applicationInfo.enabled) {
+                return false;
+            } else {
+                return true;
+            }
+        } catch (NameNotFoundException e) {
+            return false;
+        }
+    }
+
+    public static Bundle getApplicationMetadata(Context context, String pkg) {
+        if (pkg != null) {
+            try {
+                ApplicationInfo ai = context.getPackageManager().getApplicationInfo(
+                        pkg, PackageManager.GET_META_DATA);
+                return ai.metaData;
+            } catch (NameNotFoundException e) {
+                return null;
+            }
+        }
+
+        return null;
     }
 }

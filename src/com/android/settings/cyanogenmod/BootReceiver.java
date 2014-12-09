@@ -27,6 +27,7 @@ import android.util.Log;
 import com.android.settings.DisplaySettings;
 import com.android.settings.R;
 import com.android.settings.Utils;
+import com.android.settings.cyanogenmod.ButtonSettings;
 import com.android.settings.hardware.DisplayColor;
 import com.android.settings.hardware.DisplayGamma;
 import com.android.settings.hardware.VibratorIntensity;
@@ -43,31 +44,33 @@ public class BootReceiver extends BroadcastReceiver {
     private static final String IOSCHED_SETTINGS_PROP = "sys.iosched.restored";
     private static final String KSM_SETTINGS_PROP = "sys.ksm.restored";
 
+    private static final String ENCRYPTED_STATE = "1";
+
     @Override
     public void onReceive(Context ctx, Intent intent) {
-        if (SystemProperties.getBoolean(CPU_SETTINGS_PROP, false) == false
-                && intent.getAction().equals(Intent.ACTION_BOOT_COMPLETED)) {
-            SystemProperties.set(CPU_SETTINGS_PROP, "true");
-            configureCPU(ctx);
-        } else {
-            SystemProperties.set(CPU_SETTINGS_PROP, "false");
-        }
-
-        if (SystemProperties.getBoolean(IOSCHED_SETTINGS_PROP, false) == false
-                && intent.getAction().equals(Intent.ACTION_BOOT_COMPLETED)) {
-            SystemProperties.set(IOSCHED_SETTINGS_PROP, "true");
-            configureIOSched(ctx);
-        } else {
-            SystemProperties.set(IOSCHED_SETTINGS_PROP, "false");
-        }
-
-        if (Utils.fileExists(MemoryManagement.KSM_RUN_FILE)) {
-            if (SystemProperties.getBoolean(KSM_SETTINGS_PROP, false) == false
-                    && intent.getAction().equals(Intent.ACTION_BOOT_COMPLETED)) {
-                SystemProperties.set(KSM_SETTINGS_PROP, "true");
-                configureKSM(ctx);
+        if (intent.getAction().equals(Intent.ACTION_BOOT_COMPLETED)
+                && !ENCRYPTED_STATE.equals(SystemProperties.get("vold.decrypt"))) {
+            if (SystemProperties.getBoolean(CPU_SETTINGS_PROP, false) == false) {
+                SystemProperties.set(CPU_SETTINGS_PROP, "true");
+                configureCPU(ctx);
             } else {
-                SystemProperties.set(KSM_SETTINGS_PROP, "false");
+                SystemProperties.set(CPU_SETTINGS_PROP, "false");
+            }
+
+            if (SystemProperties.getBoolean(IOSCHED_SETTINGS_PROP, false) == false) {
+                SystemProperties.set(IOSCHED_SETTINGS_PROP, "true");
+                configureIOSched(ctx);
+            } else {
+                SystemProperties.set(IOSCHED_SETTINGS_PROP, "false");
+            }
+
+            if (Utils.fileExists(MemoryManagement.KSM_RUN_FILE)) {
+                if (SystemProperties.getBoolean(KSM_SETTINGS_PROP, false) == false) {
+                    SystemProperties.set(KSM_SETTINGS_PROP, "true");
+                    configureKSM(ctx);
+                } else {
+                    SystemProperties.set(KSM_SETTINGS_PROP, "false");
+                }
             }
         }
 
@@ -77,6 +80,7 @@ public class BootReceiver extends BroadcastReceiver {
         VibratorIntensity.restore(ctx);
         DisplaySettings.restore(ctx);
         LocationSettings.restore(ctx);
+        ButtonSettings.restoreKeyDisabler(ctx);
     }
 
     private void initFreqCapFiles(Context ctx)

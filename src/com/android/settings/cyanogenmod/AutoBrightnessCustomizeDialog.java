@@ -368,8 +368,7 @@ public class AutoBrightnessCustomizeDialog extends AlertDialog
         for (int i = 0; i < n; i++) {
             SettingRow row = mAdapter.getItem(i);
             x[i] = row.lux;
-            //XXX: should mMinLevel be treated as 0 in the preview?
-            y[i] = (float) row.backlight / PowerManager.BRIGHTNESS_ON;
+            y[i] = brightnessToPercent(row.backlight) / 100F;
         }
 
         final View v = getLayoutInflater().inflate(R.layout.auto_brightness_preview, null);
@@ -543,7 +542,8 @@ public class AutoBrightnessCustomizeDialog extends AlertDialog
             if (which == DialogInterface.BUTTON_POSITIVE) {
                 try {
                     int newLux = Integer.valueOf(mLuxInput.getText().toString());
-                    mAdapter.setLuxForRow(mPosition, newLux);
+                    int newBacklight = (int) progressToBrightness(mBacklightBar.getProgress());
+                    mAdapter.updateRow(mPosition, newLux, newBacklight);
                 } catch (NumberFormatException e) {
                     //ignored
                 }
@@ -787,15 +787,22 @@ public class AutoBrightnessCustomizeDialog extends AlertDialog
             sanitizeValuesAndNotify();
         }
 
-        public void setLuxForRow(final int position, int newLux) {
+        public void updateRow(final int position, int newLux, int newBacklight) {
             final SettingRow row = getItem(position);
+            boolean changed = false;
 
-            if (isLastItem(position) || row.lux == newLux) {
-                return;
+            if (!isLastItem(position) && row.lux != newLux) {
+                row.lux = newLux;
+                changed = true;
+            }
+            if (row.backlight != newBacklight) {
+                row.backlight = newBacklight;
+                changed = true;
             }
 
-            row.lux = newLux;
-            sanitizeValuesAndNotify();
+            if (changed) {
+                sanitizeValuesAndNotify();
+            }
         }
 
         public void sanitizeValuesAndNotify() {
